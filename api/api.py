@@ -2,16 +2,14 @@ from flask import Flask, request
 from generateHand import drawHand
 from flask_mysqldb import MySQL
 from wordCheck import word_check
-import json
 from maxWord import check_max_score
-#from flask_sqlalchemy import SQLAlchemy
+import config
+
 app = Flask(__name__)
-#app.config['SQLALCHEMY_DATABASE_URI']='mysql://root:powerslam18@localhost/test'
-#db = SQLAlchemy(app)
-app.config['MYSQL_HOST']='localhost'
-app.config['MYSQL_USER']='root'
-app.config['MYSQL_PASSWORD']='powerslam18'
-app.config['MYSQL_DB']='test'
+app.config['MYSQL_HOST']=config.host
+app.config['MYSQL_USER']=config.user
+app.config['MYSQL_PASSWORD']=config.password
+app.config['MYSQL_DB']=config.database
 mysql=MySQL(app)
 @app.route("/generateHand", methods=["GET"])
 def generateHand():

@@ -1,0 +1,6 @@
+.navtest {
+	width: 100%;
+}
+.wow {
+	text-align: center;
+}

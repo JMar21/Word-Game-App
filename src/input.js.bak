@@ -1,0 +1,28 @@
+import React from 'react';
+import Form from 'react-bootstrap/Form'
+import './input.css'
+class Input extends React.Component{
+	afterSubmit = (e) => {
+		e.preventDefault();
+		e.target.reset();
+		console.log('TEST');
+	}
+	render(){
+	return(
+	/*<Form className="testing" ref={(ref)=> this.test=ref}
+	onSubmit={this.afterSubmit} autoComplete="off" required>
+	  <Form.Group controlId="submitform">
+	  <Form.Control className="text-center" type="text" placeholder="Enter word"/>
+	  </Form.Group>
+	</Form>*/
+	<form className="testing" ref={(ref)=>this.mainInput=ref}onSubmit={this.afterSubmit} required>
+		<label>
+		  Enter Word:
+		  <input type="text" />
+		</label>
+		<input type="submit" value="Submit" />
+	</form>
+	)
+	}
+}
+export default Input;

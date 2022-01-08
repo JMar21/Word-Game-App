@@ -1,0 +1,6 @@
+.testing{
+	position:absolute;
+	bottom: 425px;
+	width:40%;
+	margin-left: 0%;
+}
